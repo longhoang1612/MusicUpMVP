@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/dimen_130"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dimen_5"
+    android:id="@+id/constraint_save_playlist"
+    style="@style/background_click"
+    android:orientation="vertical">
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/iv_item_home"
+        android:layout_width="@dimen/dimen_130"
+        android:layout_height="@dimen/dimen_130"
+        android:background="@drawable/custom"
+        android:scaleType="centerCrop"
+        app:placeholderImage="@drawable/image_default"
+        app:roundedCornerRadius="@dimen/dimen_5" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/dimen_10"
+        android:src="@drawable/ic_play_circle_filled_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_item_home"
+        app:layout_constraintEnd_toEndOf="@+id/iv_item_home" />
+
+    <TextView
+        android:id="@+id/name_new_pl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_3"
+        android:layout_marginStart="@dimen/dimen_5"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/dimen_text_14"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/iv_item_home"
+        app:layout_constraintTop_toBottomOf="@+id/iv_item_home" />
+
+    <TextView
+        android:id="@+id/number_playlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_10"
+        android:layout_marginStart="@dimen/dimen_5"
+        android:textSize="@dimen/dimen_text_14"
+        app:layout_constraintStart_toStartOf="@+id/iv_item_home"
+        app:layout_constraintTop_toBottomOf="@+id/name_new_pl" />
+
+</android.support.constraint.ConstraintLayout>

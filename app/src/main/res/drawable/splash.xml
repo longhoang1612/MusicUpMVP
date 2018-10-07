@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@color/color_blue_gray_900" />
+
+    <item>
+        <bitmap
+            android:gravity=""
+            android:src="@mipmap/icon_app" />
+    </item>
+
+</layer-list>

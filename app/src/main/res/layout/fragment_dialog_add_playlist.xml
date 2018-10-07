@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/background_white"
+    android:orientation="vertical"
+    android:padding="@dimen/dimen_20">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/add_to_playlist"
+        android:textSize="@dimen/dimen_text_18"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/ln_new_playlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/dimen_5"
+        android:paddingBottom="@dimen/dimen_10"
+        tools:ignore="RtlSymmetry">
+
+        <RelativeLayout
+            android:layout_width="@dimen/dimen_50"
+            android:layout_height="@dimen/dimen_50"
+            android:background="@color/color_grey_200">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_add_circle_black_24dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/dimen_20"
+            android:text="@string/create_playlist"
+            android:textColor="#000"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_playlist_new"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ln_new_playlist"
+        android:paddingStart="@dimen/dimen_5"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        tools:ignore="RtlSymmetry" />
+</RelativeLayout>
+
+

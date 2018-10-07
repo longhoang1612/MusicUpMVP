@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/background_white"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_90">
+
+    <ImageView
+        android:id="@+id/image_background_notification"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_notify_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_20"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/dimen_text_14" />
+
+            <TextView
+                android:id="@+id/text_notify_singer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_notify_name"
+                android:layout_marginStart="@dimen/dimen_20"
+                android:layout_marginTop="@dimen/dimen_3"
+                android:ellipsize="end"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/dimen_text_14" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_notify_singer"
+                android:layout_marginStart="@dimen/dimen_15"
+                android:layout_marginTop="@dimen/dimen_5">
+
+                <ImageView
+                    android:id="@+id/image_notify_previous"
+                    android:layout_width="@dimen/dimen_40"
+                    android:layout_height="@dimen/dimen_40"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_skip_previous_white" />
+
+                <ImageView
+                    android:id="@+id/image_notify_pause"
+                    android:layout_width="@dimen/dimen_40"
+                    android:layout_height="@dimen/dimen_40"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dimen_15"
+                    android:layout_marginRight="@dimen/dimen_15"
+                    android:layout_toEndOf="@+id/image_notify_previous"
+                    app:srcCompat="@drawable/ic_pause_mini" />
+
+                <ImageView
+                    android:id="@+id/image_notify_next"
+                    android:layout_width="@dimen/dimen_40"
+                    android:layout_height="@dimen/dimen_40"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dimen_20"
+                    android:layout_toEndOf="@+id/image_notify_pause"
+                    android:src="@drawable/ic_skip_next_white" />
+
+                <ImageView
+                    android:id="@+id/image_notify_clear"
+                    android:layout_width="@dimen/dimen_24"
+                    android:layout_height="@dimen/dimen_24"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/image_notify_next"
+                    android:src="@drawable/ic_power_settings_new_white" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/image_notify_avatar"
+                android:layout_width="@dimen/dimen_65dp"
+                android:layout_height="@dimen/dimen_65dp"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image_default" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraint_favorites_song"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/mini_play_height"
+    android:layout_margin="@dimen/dimen_8"
+    style="@style/background_click"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="horizontal">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/image_favorites"
+        android:layout_width="@dimen/dimen_60"
+        android:layout_height="@dimen/dimen_45"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:placeholderImage="@drawable/image_default"
+        app:roundedCornerRadius="@dimen/dimen_3" />
+
+    <TextView
+        android:id="@+id/text_name_favorites"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_5"
+        android:layout_marginRight="@dimen/dimen_5"
+        android:layout_marginTop="@dimen/dimen_5"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_blue_gray_900"
+        android:textSize="@dimen/dimen_text_16"
+        app:layout_constraintEnd_toStartOf="@+id/icon_more_song"
+        app:layout_constraintStart_toEndOf="@id/image_favorites"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_auth_favorites"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_5"
+        android:layout_marginStart="@dimen/dimen_5"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="@dimen/dimen_text_14"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/icon_more_song"
+        app:layout_constraintStart_toEndOf="@id/image_favorites" />
+
+    <ImageView
+        android:id="@+id/icon_more_song"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/dimen_10"
+        android:src="@drawable/ic_more_vert_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

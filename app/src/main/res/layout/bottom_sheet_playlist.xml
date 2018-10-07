@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/iv_bottom_sheet"
+        android:layout_width="@dimen/dimen_60"
+        android:layout_height="@dimen/dimen_50"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="@dimen/dimen_10"
+        android:scaleType="centerCrop"
+        android:src="@drawable/gradient"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:roundedCornerRadius="@dimen/dimen_3" />
+
+    <TextView
+        android:id="@+id/tv_title_bottom_sheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10"
+        android:layout_marginTop="@dimen/dimen_4"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_gray_600"
+        android:textSize="@dimen/dimen_text_16"
+        app:layout_constraintStart_toEndOf="@+id/iv_bottom_sheet"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_auth_bottom_sheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_5"
+        android:textSize="@dimen/dimen_text_14"
+        app:layout_constraintStart_toStartOf="@+id/tv_title_bottom_sheet"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_bottom_sheet" />
+
+    <android.support.v7.widget.RecyclerView
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        android:id="@+id/rv_bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_15"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_marginRight="@dimen/dimen_10"
+        android:layout_marginTop="@dimen/dimen_5"
+        app:layout_constraintTop_toBottomOf="@+id/iv_bottom_sheet" />
+</android.support.constraint.ConstraintLayout>

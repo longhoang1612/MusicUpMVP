@@ -1,0 +1,148 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/background_white"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/image_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_10"
+        android:src="@drawable/ic_new_releases_black_24dp"
+        app:layout_constraintEnd_toStartOf="@id/text_fav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_playlist_favorites" />
+
+    <TextView
+        android:id="@+id/text_offline"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="@dimen/dimen_0"
+        android:layout_margin="@dimen/dimen_10"
+        android:text="@string/music_offline"
+        android:textColor="@color/color_blue_400"
+        android:textSize="@dimen/dimen_text_18"
+        app:layout_constraintBottom_toTopOf="@+id/fav"
+        app:layout_constraintEnd_toStartOf="@+id/image_offline"
+        app:layout_constraintStart_toEndOf="@+id/image_download"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_playlist_favorites" />
+
+    <ImageView
+        android:id="@+id/image_offline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_10"
+        android:src="@drawable/ic_chevron_right_black_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_playlist_favorites" />
+
+    <ImageView
+        android:id="@+id/fav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_10"
+        android:src="@drawable/ic_favorite_red"
+        app:layout_constraintEnd_toStartOf="@id/text_fav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_download" />
+
+    <TextView
+        android:id="@+id/text_fav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_10"
+        android:text="@string/favorite_songs"
+        android:textColor="@color/color_red_800"
+        android:textSize="@dimen/dimen_text_18"
+        app:layout_constraintStart_toEndOf="@+id/fav"
+        app:layout_constraintTop_toBottomOf="@+id/image_download" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_10"
+        android:src="@drawable/ic_chevron_right_black_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_download" />
+
+    <ImageView
+        android:id="@+id/ic_favorites_playlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_10"
+        android:src="@drawable/ic_queue_music_black_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:text="@string/playlist"
+        android:textColor="@color/color_green_700"
+        android:textSize="@dimen/dimen_text_18"
+        app:layout_constraintEnd_toStartOf="@+id/ic_add_playlist"
+        app:layout_constraintStart_toEndOf="@+id/ic_favorites_playlist"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ic_add_playlist"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_0"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/dimen_8"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/ic_chevron_right_black_24dp"
+        app:layout_constraintBottom_toTopOf="@+id/recycler_playlist_favorites"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_fav"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_playlist_favorites"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_8"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:layout_marginEnd="@dimen/dimen_8"
+        android:orientation="horizontal"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:src="@drawable/ic_get_app_cyan_800_24dp"
+        app:layout_constraintStart_toStartOf="@+id/image_download"
+        app:layout_constraintTop_toBottomOf="@+id/fav" />
+
+    <TextView
+        android:id="@+id/text_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/music_download"
+        android:textColor="@color/color_cyan_800"
+        android:textSize="@dimen/dimen_text_18"
+        app:layout_constraintBottom_toBottomOf="@+id/image"
+        app:layout_constraintStart_toStartOf="@+id/text_offline"
+        app:layout_constraintTop_toTopOf="@+id/image" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_10"
+        android:src="@drawable/ic_chevron_right_black_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/image" />
+
+</android.support.constraint.ConstraintLayout>
